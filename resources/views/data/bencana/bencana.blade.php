@@ -12,8 +12,74 @@
           <div class="card-header pb-0">
             <h6 class="text-uppercase">Daftar Bencana Tanah Longsor di Jawa Timur</h6>
           </div>
+          <div class="card-body px-0 pt-0 pb-2">
 
-          <div class="card-body px-0 pt-3 pb-2">
+            {{-- Show modal with button using bootstrap --}}
+            <div class="d-flex">
+              <button class="mx-3 mt-4 px-3 btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#create">
+                <i class="fa fa-plus pe-2"></i>Tambah Data
+              </button>
+
+              <!-- Modal Create -->
+              <div class="modal fade" id="create" tabindex="-1" role="dialog" aria-labelledby="createLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+
+                    <div class="modal-header mx-auto">
+                      <h5 class="modal-title text-uppercase" id="createLabel">Input Data Bencana Tanah Longsor</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+
+                    {{-- Form Create --}}
+                    <form method="POST" action="{{ route('bencana.store') }}">
+                      @csrf
+
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <label class="form-control-label" for="input-kabupaten">Nama Kota / Kabupaten</label>
+                              <select class="form-control" id="input-kabupaten" name="kabupaten_id">
+                                @foreach ($kabupaten as $kab)
+                                  <option value="{{ $kab->id }}">{{ $kab->nama_kabupaten }}</option>
+                                @endforeach
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label class="form-control-label" for="input-gerakan-tanah">Gerakan Tanah</label>
+                              <input type="number" name="gerakan_tanah" class="form-control" id="input-gerakan-tanah" step="0.01">
+                            </div>
+                            <div class="form-group">
+                              <label class="form-control-label" for="input-tanggal">Tanggal Kejadian</label>
+                              <input type="date" name="tanggal" class="form-control" id="input-tanggal">
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <label class="form-control-label" for="input-waktu">Waktu Kejadian</label>
+                              <input type="time" name="waktu" class="form-control" id="input-waktu">
+                            </div>
+                            <div class="form-group">
+                              <label for="input-alamat">Alamat Kabupaten</label>
+                              <textarea class="form-control" rows="5" name="alamat" id="input-alamat" aria-label="Input Alamat"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn bg-gradient-primary">Simpan</button>
+                      </div>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {{-- Datatable --}}
             <div class="table-responsive p-0">
               <table class="table align-items-center mb-0" id="table-bencana">

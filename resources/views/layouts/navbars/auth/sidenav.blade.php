@@ -34,8 +34,8 @@
               </a>
             </li>
             <li class="nav-item ps-3">
-              <a class="nav-link {{ Route::currentRouteName() == 'kerentanan-sosial' ? 'active' : '' }}" href="{{ route('kerentanan-sosial') }}">
-                <i class="fas fa-circle {{ Route::currentRouteName() == 'kerentanan-sosial' ? 'text-success' : 'text-secondary' }} text-xs opacity-10"></i>
+              <a class="nav-link {{ str_contains(Route::currentRouteName(), 'kerentanan') ? 'active' : '' }}" href="{{ route('kerentanan-sosial') }}">
+                <i class="fas fa-circle {{ str_contains(Route::currentRouteName(), 'kerentanan') ? 'text-success' : 'text-secondary' }} text-xs opacity-10"></i>
                 {{ __('Kerentanan') }}
               </a>
             </li>

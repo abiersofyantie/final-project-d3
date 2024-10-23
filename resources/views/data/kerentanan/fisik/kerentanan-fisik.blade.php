@@ -32,20 +32,13 @@
               <table class="table align-items-center mb-0" id="table-indeks-kapasitas">
                 <thead>
                   <tr>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                      ID.</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                      Nama Kabupaten</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                      Fasilitas Umum</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                      Fasilitas Kritis</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                      Rumah</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                      Hasil</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                      Aksi</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"> ID. </th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"> Nama Kabupaten </th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"> Fasilitas Umum </th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"> Fasilitas Kritis </th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"> Rumah </th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"> Hasil </th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"> Aksi </th>
                 </thead>
                 <tbody>
                   @foreach ($fisik as $fis)
@@ -73,11 +66,7 @@
                         <p class="text-xs font-weight-bold mb-0">{{ number_format($fis->hasil_kerenfis) }}</p>
                       </td>
                       <td class="align-middle text-center">
-                        <button class="btn my-auto ps-3 pe-1 btn-link text-secondary font-weight-bold text-xs" onclick="confirmDelete({{ $fis->id }})" data-toggle="tooltip"
-                          data-original-title="Edit user">
-                          <i class="fas fa-trash-alt text-danger"></i>
-                        </button>
-                        <button class="btn my-auto ps-1 pe-3 btn-link text-secondary font-weight-bold text-xs" data-bs-toggle="modal" data-bs-target="#edit-{{ $fis->id }}">
+                        <button class="btn my-auto btn-link text-secondary font-weight-bold text-xs" data-bs-toggle="modal" data-bs-target="#edit-{{ $fis->id }}">
                           <i class="fas fa-edit text-warning"></i>
                         </button>
                       </td>
