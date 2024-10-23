@@ -17,15 +17,15 @@
 
       {{-- Collapse Data --}}
       <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="collapse" href="#collapse-data" role="button" aria-expanded="{{ request()->route()->getPrefix() == 'data' ? 'true' : 'false' }}" aria-controls="collapse-data">
+        <a class="nav-link" data-bs-toggle="collapse" href="#collapse-data" role="button" aria-expanded="{{ str_contains(request()->route()->getPrefix(), 'data') ? 'true' : 'false' }}" aria-controls="collapse-data">
           <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-            <i class="fas fa-layer-group {{ request()->route()->getPrefix() == 'data' ? 'text-success' : 'text-secondary' }} text-sm opacity-10"></i>
+            <i class="fas fa-layer-group {{ str_contains(request()->route()->getPrefix(), 'data') ? 'text-success' : 'text-secondary' }} text-sm opacity-10"></i>
           </div>
           <span class="nav-link-text ms-1">Data</span>
         </a>
 
         {{-- List Items --}}
-        <div class="collapse {{ request()->route()->getPrefix() == 'data' ? 'show' : '' }}" id="collapse-data">
+        <div class="collapse {{ str_contains(request()->route()->getPrefix(), 'data') ? 'show' : '' }}" id="collapse-data">
           <ul class="nav nav-sm flex-column">
             <li class="nav-item ps-3">
               <a class="nav-link {{ Route::currentRouteName() == 'bencana' ? 'active' : '' }}" href="{{ route('bencana') }}">
@@ -49,22 +49,22 @@
         </div>
       </li>
 
-      {{-- Collapse Process --}}
+      {{-- Collapse AHP --}}
       <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="collapse" href="#collapse-process" role="button" aria-expanded="{{ request()->route()->getPrefix() == 'process' ? 'true' : 'false' }}" aria-controls="collapse-process">
+        <a class="nav-link" data-bs-toggle="collapse" href="#collapse-ahp" role="button" aria-expanded="{{ Route::currentRouteName() == 'AHP' ? 'true' : 'false' }}" aria-controls="collapse-ahp">
           <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-            <i class="fas fa-cog {{ request()->route()->getPrefix() == 'process' ? 'text-success' : 'text-secondary' }} text-sm opacity-10"></i>
+            <i class="fas fa-swatchbook {{ Route::currentRouteName() == 'AHP' ? 'text-success' : 'text-secondary' }} text-sm opacity-10"></i>
           </div>
-          <span class="nav-link-text ms-1">AHP</span>
+          <span class="nav-link-text ms-1">Metode AHP</span>
         </a>
 
         {{-- List Items --}}
-        <div class="collapse" id="collapse-process">
+        <div class="collapse {{ Route::currentRouteName() == 'AHP' ? 'show' : '' }}" id="collapse-ahp">
           <ul class="nav nav-sm flex-column">
             <li class="nav-item ps-3">
               <a class="nav-link {{ Route::currentRouteName() == 'AHP' ? 'active' : '' }}" href="{{ route('AHP') }}">
                 <i class="fas fa-circle {{ Route::currentRouteName() == 'AHP' ? 'text-success' : 'text-secondary' }} text-xs opacity-10"></i>
-                {{ __('AHP') }}
+                {{ __('Proses AHP') }}
               </a>
             </li>
             <li class="nav-item ps-3">
@@ -77,22 +77,34 @@
         </div>
       </li>
 
+      {{-- Collapse FAHP --}}
       <li class="nav-item">
-        <a class="nav-link {{ str_contains(request()->url(), 'rtl') == true ? 'active' : '' }}" href="{{ route('FAHP') }}">
+        <a class="nav-link" data-bs-toggle="collapse" href="#collapse-fahp" role="button" aria-expanded="{{ Route::currentRouteName() == 'FAHP' ? 'true' : 'false' }}" aria-controls="collapse-fahp">
           <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-            <i class="fas fa-swatchbook text-secondary text-sm opacity-10"></i>
+            <i class="fas fa-swatchbook {{ Route::currentRouteName() == 'FAHP' ? 'text-success' : 'text-secondary' }} text-sm opacity-10"></i>
           </div>
-          <span class="nav-link-text ms-1">Fuzzy - AHP</span>
+          <span class="nav-link-text ms-1">Metode FAHP</span>
         </a>
+
+        {{-- List Items --}}
+        <div class="collapse {{ Route::currentRouteName() == 'FAHP' ? 'show' : '' }}" id="collapse-fahp">
+          <ul class="nav nav-sm flex-column">
+            <li class="nav-item ps-3">
+              <a class="nav-link {{ Route::currentRouteName() == 'FAHP' ? 'active' : '' }}" href="{{ route('FAHP') }}">
+                <i class="fas fa-circle {{ Route::currentRouteName() == 'FAHP' ? 'text-success' : 'text-secondary' }} text-xs opacity-10"></i>
+                {{ __('Proses FAHP') }}
+              </a>
+            </li>
+            <li class="nav-item ps-3">
+              <a class="nav-link" href="{{ route('MapFuzzy') }}">
+                <i class="fas fa-circle text-secondary text-xs opacity-10"></i>
+                {{ __('PRB Mapin') }}
+              </a>
+            </li>
+          </ul>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link {{ str_contains(request()->url(), 'virtual-reality') == true ? 'active' : '' }}" href="{{ route('MapFuzzy') }}">
-          <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-            <i class="fas fa-globe-asia text-secondary text-sm opacity-10"></i>
-          </div>
-          <span class="nav-link-text ms-1">PRB - Mapin</span>
-        </a>
-      </li>
+
       <li class="nav-item">
         <a class="nav-link {{ Route::currentRouteName() == 'profile' ? 'active' : '' }}" href="{{ route('profile') }}">
           <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
