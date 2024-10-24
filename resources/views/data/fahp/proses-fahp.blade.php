@@ -20,6 +20,7 @@
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"> Nama Kabupaten </th>
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"> Bobot </th>
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"> Kelas Resiko </th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"> Aksi </th>
                 </tr>
               </thead>
               <tbody>
@@ -39,18 +40,64 @@
                         <p class="text-xs font-weight-bold mb-0">{{ $fp->bobot_fahp }}</p>
                       </td>
                       <td class="">
-                        @if ($fp->bobot_fahp >= 0 && $fp->bobot_fahp <= 0.0218)
+                        @if ($fp->bobot_fahp >= 0 && $fp->bobot_fahp <= 0.0247)
                           <span class="badge badge-sm bg-gradient-success">Rendah</span>
-                        @elseif ($fp->bobot_fahp >= 0.0247 && $fp->bobot_fahp <= 0.0373)
+                        @elseif ($fp->bobot_fahp >= 0.0247 && $fp->bobot_fahp <= 0.051)
                           <span class="badge badge-sm bg-gradient-warning">Sedang</span>
                         @elseif ($fp->bobot_fahp >= 0.051)
                           <span class="badge badge-sm bg-gradient-danger">Tinggi</span>
                         @endif
                       </td>
+                      <td class="align-middle text-center">
+                        <button class="btn my-auto btn-link text-secondary font-weight-bold text-xs" data-bs-toggle="modal" data-bs-target="#edit-{{ $fp->id }}">
+                          <i class="fas fa-edit text-warning"></i>
+                        </button>
+                      </td>
                     </tr>
 
                     {{-- Modal Edit --}}
+                    <div class="modal fade" id="edit-{{ $fp->id }}" tabindex="-1" role="dialog" aria-labelledby="createLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
 
+                          <div class="modal-header mx-auto">
+                            <h5 class="modal-title text-uppercase" id="createLabel">Edit Data FAHP</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+
+                          {{-- Form Edit --}}
+                          <form method="POST" action="{{ route('fahp.update', $fp->id) }}">
+                            <div class="modal-body">
+                              @csrf
+
+                              <div class="row">
+                                <div class="col">
+                                  <div class="form-group">
+                                    <label class="form-control-label" for="input-kabupaten">Nama Kota / Kabupaten</label>
+                                    <select class="form-control" disabled>
+                                      <option selected>{{ $fp->nama_kabupaten }}</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <div class="form-group">
+                                    <label class="form-control-label" for="input-bobot">Bobot FAHP</label>
+                                    <input type="number" name="bobot" class="form-control" id="input-bobot" step="0.0001" value="{{ $fp->bobot_fahp }}">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="modal-footer">
+                              <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Batal</button>
+                              <button type="submit" class="btn bg-gradient-primary">Simpan</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
                     {{-- End of Modal Edit --}}
                   @endforeach
               </tbody>

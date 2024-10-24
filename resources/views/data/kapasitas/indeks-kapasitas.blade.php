@@ -19,16 +19,12 @@
               <table class="table align-items-center mb-0" id="table-indeks-kapasitas">
                 <thead>
                   <tr>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                      ID.</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                      Nama Kabupaten</th>
-                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                      Skor</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                      Kelas Risiko</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                      Aksi</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"> ID. </th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"> Nama Kabupaten </th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"> Skor </th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"> Kelas Risiko </th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"> Aksi </th>
+                  </tr>
                 </thead>
                 <tbody>
                   @foreach ($kapasitas as $kap)
@@ -56,8 +52,7 @@
                         @endif
                       </td>
                       <td class="align-middle text-center">
-                        <button class="btn my-auto ps-3 pe-1 btn-link text-secondary font-weight-bold text-xs" onclick="confirmDelete({{ $kap->id }})" data-toggle="tooltip"
-                          data-original-title="Edit user">
+                        <button class="btn my-auto ps-3 pe-1 btn-link text-secondary font-weight-bold text-xs" onclick="confirmDelete({{ $kap->id }})" data-toggle="tooltip" data-original-title="Edit kapasitas">
                           <i class="fas fa-trash-alt text-danger"></i>
                         </button>
                         <button class="btn my-auto ps-1 pe-3 btn-link text-secondary font-weight-bold text-xs" data-bs-toggle="modal" data-bs-target="#edit-{{ $kap->id }}">
@@ -66,7 +61,7 @@
                       </td>
                     </tr>
 
-                    <!-- Modal Edit -->
+                    {{-- Modal Edit --}}
                     <div class="modal fade" id="edit-{{ $kap->id }}" tabindex="-1" role="dialog" aria-labelledby="createLabel" aria-hidden="true">
                       <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
@@ -108,7 +103,6 @@
                               <button type="submit" class="btn bg-gradient-primary">Simpan</button>
                             </div>
                           </form>
-
                         </div>
                       </div>
                     </div>

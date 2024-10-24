@@ -2,6 +2,9 @@
 
 @section('content')
 @include('layouts.navbars.auth.topnav', ['title' => 'AHP'])
+<div id="alert">
+  @include('components.alert')
+</div>
 <div class="container-fluid py-4">
   <div class="row">
     <div class="col-12">
@@ -20,39 +23,86 @@
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"> Nama Kabupaten </th>
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"> Bobot </th>
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"> Kelas Resiko </th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"> Aksi </th>
                 </tr>
               </thead>
               <tbody>
-                  @foreach ($ahp as $ahp)
+                  @foreach ($ahp as $ap)
                     <tr>
                       <td>
                         <div class="d-flex px-3 py-1">
                           <div class="d-flex flex-column justify-content-center">
-                            <p class="mb-0 text-sm">{{ $ahp->id }}.</p>
+                            <p class="mb-0 text-sm">{{ $ap->id }}.</p>
                           </div>
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">{{ $ahp->nama_kabupaten }}</p>
+                        <p class="text-xs font-weight-bold mb-0">{{ $ap->nama_kabupaten }}</p>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">{{ $ahp->bobot_ahp }}</p>
+                        <p class="text-xs font-weight-bold mb-0">{{ $ap->bobot_ahp }}</p>
                       </td>
                       <td class="">
-                        @if ($ahp->bobot_ahp >= 0 && $ahp->bobot_ahp <= 0.0332)
+                        @if ($ap->bobot_ahp >= 0 && $ap->bobot_ahp <= 0.0385)
                           <span class="badge badge-sm bg-gradient-success">Rendah</span>
-                        @elseif ($ahp->bobot_ahp >= 0.0385 && $ahp->bobot_ahp <= 0.0623)
+                        @elseif ($ap->bobot_ahp >= 0.0385 && $ap->bobot_ahp <= 0.0918)
                           <span class="badge badge-sm bg-gradient-warning">Sedang</span>
-                        @elseif ($ahp->bobot_ahp >= 0.0918)
+                        @elseif ($ap->bobot_ahp >= 0.0918)
                           <span class="badge badge-sm bg-gradient-danger">Tinggi</span>
                         @endif
                       </td>
+                      <td class="align-middle text-center">
+                        <button class="btn my-auto btn-link text-secondary font-weight-bold text-xs" data-bs-toggle="modal" data-bs-target="#edit-{{ $ap->id }}">
+                          <i class="fas fa-edit text-warning"></i>
+                        </button>
+                      </td>
                     </tr>
+
+                    {{-- Modal Edit --}}
+                    <div class="modal fade" id="edit-{{ $ap->id }}" tabindex="-1" role="dialog" aria-labelledby="createLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+
+                          <div class="modal-header mx-auto">
+                            <h5 class="modal-title text-uppercase" id="createLabel">Edit Data AHP</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+
+                          {{-- Form Edit --}}
+                          <form method="POST" action="{{ route('ahp.update', $ap->id) }}">
+                            <div class="modal-body">
+                              @csrf
+
+                              <div class="row">
+                                <div class="col">
+                                  <div class="form-group">
+                                    <label class="form-control-label" for="input-kabupaten">Nama Kota / Kabupaten</label>
+                                    <select class="form-control" disabled>
+                                      <option selected>{{ $ap->nama_kabupaten }}</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <div class="form-group">
+                                    <label class="form-control-label" for="input-bobot">Bobot AHP</label>
+                                    <input type="number" name="bobot" class="form-control" id="input-bobot" step="0.0001" value="{{ $ap->bobot_ahp }}">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="modal-footer">
+                              <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Batal</button>
+                              <button type="submit" class="btn bg-gradient-primary">Simpan</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    {{-- End of Modal Edit --}}
                   @endforeach
-
-                  {{-- Modal Edit --}}
-
-                  {{-- End of Modal Edit --}}
               </tbody>
             </table>
           </div>

@@ -15,4 +15,16 @@ class FuzzyController extends Controller
 
         return view('data.fuzzy.proses-fuzzy', compact('fuzzy', 'bobot'));
     }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        Kabupaten::where('id', $id)->update([
+            'bobot_fuzzy' => $request->bobot,
+        ]);
+
+        return back()->with('succes', 'Data berhasil diubah');
+    }
 }

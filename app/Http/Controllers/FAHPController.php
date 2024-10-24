@@ -15,4 +15,16 @@ class FAHPController extends Controller
 
         return view('data.fahp.proses-fahp', compact('fahp', 'bobot'));
     }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        Kabupaten::where('id', $id)->update([
+            'bobot_fahp' => $request->bobot,
+        ]);
+
+        return back()->with('succes', 'Data berhasil diubah');
+    }
 }

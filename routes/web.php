@@ -106,18 +106,21 @@ Route::group(['middleware' => 'auth'], function () {
 		Route::post('/get-color', [JsonController::class, 'getColor']);
 
 		// AHP
+		Route::post('/ahp/{id}', [AHPController::class, 'update'])->name('ahp.update');
 		Route::get('/proses-AHP', [AHPController::class, 'index'])->name('AHP');
 		Route::get('/map-ahp', function () {
 			return view('data.ahp.map-ahp');
 		})->name('MapAHP');
 
 		// Fuzzy
+		Route::post('/fuzzy/{id}', [FuzzyController::class, 'update'])->name('fuzzy.update');
 		Route::get('/proses-Fuzzy', [FuzzyController::class, 'index'])->name('Fuzzy');
 		Route::get('/map-fuzzy', function () {
 			return view('data.fuzzy.map-fuzzy');
 		})->name('MapFuzzy');
 
 		// FAHP
+		Route::post('/fahp/{id}', [FAHPController::class, 'update'])->name('fahp.update');
 		Route::get('/proses-FAHP', [FAHPController::class, 'index'])->name('FAHP');
 		Route::get('/map-fahp', function () {
 			return view('data.fahp.map-fahp');

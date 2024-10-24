@@ -20,6 +20,7 @@
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"> Nama Kabupaten </th>
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"> Bobot </th>
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"> Kelas Resiko </th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"> Aksi </th>
                 </tr>
               </thead>
               <tbody>
@@ -39,18 +40,64 @@
                         <p class="text-xs font-weight-bold mb-0">{{ $fuzz->bobot_fuzzy }}</p>
                       </td>
                       <td class="">
-                        @if ($fuzz->bobot_fuzzy >= 0 && $fuzz->bobot_fuzzy <= 0.0218)
+                        @if ($fuzz->bobot_fuzzy >= 0 && $fuzz->bobot_fuzzy <= 0.0247)
                           <span class="badge badge-sm bg-gradient-success">Rendah</span>
-                        @elseif ($fuzz->bobot_fuzzy >= 0.0247 && $fuzz->bobot_fuzzy <= 0.0373)
+                        @elseif ($fuzz->bobot_fuzzy >= 0.0247 && $fuzz->bobot_fuzzy <= 0.051)
                           <span class="badge badge-sm bg-gradient-warning">Sedang</span>
                         @elseif ($fuzz->bobot_fuzzy >= 0.051)
                           <span class="badge badge-sm bg-gradient-danger">Tinggi</span>
                         @endif
                       </td>
+                      <td class="align-middle text-center">
+                        <button class="btn my-auto btn-link text-secondary font-weight-bold text-xs" data-bs-toggle="modal" data-bs-target="#edit-{{ $fuzz->id }}">
+                          <i class="fas fa-edit text-warning"></i>
+                        </button>
+                      </td>
                     </tr>
 
                     {{-- Modal Edit --}}
+                    <div class="modal fade" id="edit-{{ $fuzz->id }}" tabindex="-1" role="dialog" aria-labelledby="createLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
 
+                          <div class="modal-header mx-auto">
+                            <h5 class="modal-title text-uppercase" id="createLabel">Edit Data Fuzzy</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+
+                          {{-- Form Edit --}}
+                          <form method="POST" action="{{ route('fuzzy.update', $fuzz->id) }}">
+                            <div class="modal-body">
+                              @csrf
+
+                              <div class="row">
+                                <div class="col">
+                                  <div class="form-group">
+                                    <label class="form-control-label" for="input-kabupaten">Nama Kota / Kabupaten</label>
+                                    <select class="form-control" disabled>
+                                      <option selected>{{ $fuzz->nama_kabupaten }}</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <div class="form-group">
+                                    <label class="form-control-label" for="input-bobot">Bobot AHP</label>
+                                    <input type="number" name="bobot" class="form-control" id="input-bobot" step="0.0001" value="{{ $fuzz->bobot_fuzzy }}">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="modal-footer">
+                              <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Batal</button>
+                              <button type="submit" class="btn bg-gradient-primary">Simpan</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
                     {{-- End of Modal Edit --}}
                   @endforeach
               </tbody>
