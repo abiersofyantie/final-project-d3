@@ -43,14 +43,14 @@
                               <p class="text-xs font-weight-bold mb-0">{{ $fp->nama_kabupaten }}</p>
                             </td>
                             <td>
-                                <p class="text-xs font-weight-bold mb-0">{{ $fp->bobot_fuzzy }}</p>
+                                <p class="text-xs font-weight-bold mb-0">{{ $fp->bobot_fahp }}</p>
                               </td>
                               <td class="">
-                                @if ($fp->bobot_fuzzy >= 0 && $fp->bobot_fuzzy <= 0.0218)
+                                @if ($fp->bobot_fahp >= 0 && $fp->bobot_fahp <= 0.0218)
                                   <span class="badge badge-sm bg-gradient-success">Rendah</span>
-                                @elseif ($fp->bobot_fuzzy >= 0.0247 && $fp->bobot_fuzzy <= 0.0373)
+                                @elseif ($fp->bobot_fahp >= 0.0247 && $fp->bobot_fahp <= 0.0373)
                                   <span class="badge badge-sm bg-gradient-warning">Sedang</span>
-                                @elseif ($fp->bobot_fuzzy >= 0.051)
+                                @elseif ($fp->bobot_fahp >= 0.051)
                                   <span class="badge badge-sm bg-gradient-danger">Tinggi</span>
                                 @endif
                               </td>
