@@ -11,25 +11,32 @@ class JsonController extends Controller
     public function index()
     {
         $file = File::get('public/jawa-timur.json');
+
         return $file;
     }
 
-    function getColor(Request $request) {
+    function getColor(Request $request)
+    {
         $tipe = $request->input('tipe');
+        $id = $request->input('id');
 
-        if ($tipe == "ahp")
-            $color = Kabupaten::where('id', $request->input('id'))->value('color_ahp');
-        if ($tipe == "fahp")
-            $color = Kabupaten::where('id', $request->input('id'))->value('color_fahp');
-
+        if ($tipe == "ahp") {
+            $color = Kabupaten::where('id', $id)->value('color_ahp');
+            $status = Kabupaten::where('id', $id)->value('status_ahp');
+            $bobot = Kabupaten::where('id', $id)->value('bobot_ahp');
+        } else if ($tipe == "fahp") {
+            $color = Kabupaten::where('id', $id)->value('color_fahp');
+            $status = Kabupaten::where('id', $id)->value('status_fahp');
+            $bobot = Kabupaten::where('id', $id)->value('bobot_fuzzy');
+        }
 
         // Create an associative array with the color value
-        $data = array('color' => $color);
+        $data = ['color' => $color, 'status' => $status, 'bobot' => $bobot];
 
         // Convert the array to JSON format
         $json = json_encode($data);
 
         // Return the JSON data
         return $json;
-      }
+    }
 }
