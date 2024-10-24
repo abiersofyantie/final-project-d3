@@ -81,7 +81,7 @@ class BencanaController extends Controller
     public function update(Request $request, string $id)
     {
         $gerakanTanahLama = DB::table('bencana')->where('id', $id)->value('gerakan_tanah');
-        // dd($gerakanTanahLama);
+
         Bencana::where('id', $id)->update([
             'kabupaten_id' => $request->kabupaten_id,
             'alamat_bencana' => $request->alamat,
