@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('color_ahp')->nullable();
             $table->enum('status_fahp', ['Tinggi', 'Sedang', 'Rendah'])->nullable();
             $table->string('color_fahp')->nullable();
+            $table->double('bobot_ahp');
+            $table->double('bobot_fuzzy');
         });
     }
 

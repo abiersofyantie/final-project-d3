@@ -22,6 +22,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
+                'bobot_ahp'=>'0.0325',
+                'bobot_fuzzy'=>'0.0209',
             ],
             [
                 'nama_kabupaten' => 'Ponorogo',
@@ -31,6 +33,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#d4cc39',
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
+                'bobot_ahp'=>'0.0597',
+                'bobot_fuzzy'=>'0.0261',
             ],
             [
                 'nama_kabupaten' => 'Trenggalek',
@@ -40,6 +44,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#d4cc39',
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
+                'bobot_ahp'=>'0.0623',
+                'bobot_fuzzy'=>'0.0290',
             ],
             [
                 'nama_kabupaten' => 'Tulungagung',
@@ -49,6 +55,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
+                'bobot_ahp'=>'0.0142',
+                'bobot_fuzzy'=>'0.0251',
             ],
             [
                 'nama_kabupaten' => 'Blitar',
@@ -58,6 +66,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
+                'bobot_ahp'=>'0.0157',
+                'bobot_fuzzy'=>'0.0268',
             ],
             [
                 'nama_kabupaten' => 'Kediri',
@@ -67,6 +77,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
+                'bobot_ahp'=>'0.0163',
+                'bobot_fuzzy'=>'0.0275',
             ],
             [
                 'nama_kabupaten' => 'Malang',
@@ -76,6 +88,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#d4cc39',
                 'status_fahp'=>'Tinggi',
                 'color_fahp'=>'#d64545',
+                'bobot_ahp'=>'0.0614',
+                'bobot_fuzzy'=>'0.0535',
             ],
             [
                 'nama_kabupaten' => 'Lumajang',
@@ -85,6 +99,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#d4cc39',
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
+                'bobot_ahp'=>'0.0385',
+                'bobot_fuzzy'=>'0.0277',
             ],
             [
                 'nama_kabupaten' => 'Jember',
@@ -94,6 +110,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp'=>'#d64545',
                 'status_fahp'=>'Tinggi',
                 'color_fahp'=>'#d64545',
+                'bobot_ahp'=>'0.0918',
+                'bobot_fuzzy'=>'0.0622',
             ],
             [
                 'nama_kabupaten' => 'Banyuwangi',
@@ -103,6 +121,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#d4cc39',
                 'status_fahp'=>'Tinggi',
                 'color_fahp'=>'#d64545',
+                'bobot_ahp'=>'0.0454',
+                'bobot_fuzzy'=>'0.0510',
             ],
             [
                 'nama_kabupaten' => 'Bondowoso',
@@ -112,6 +132,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
+                'bobot_ahp'=>'0.0183',
+                'bobot_fuzzy'=>'0.0298',
             ],
             [
                 'nama_kabupaten' => 'Situbondo',
@@ -121,6 +143,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#d4cc39',
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
+                'bobot_ahp'=>'0.0463',
+                'bobot_fuzzy'=>'0.0365',
             ],
             [
                 'nama_kabupaten' => 'Probolinggo',
@@ -130,6 +154,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#d4cc39',
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
+                'bobot_ahp'=>'0.0443',
+                'bobot_fuzzy'=>'0.0342',
             ],
             [
                 'nama_kabupaten' => 'Pasuruan',
@@ -139,6 +165,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
+                'bobot_ahp'=>'0.0250',
+                'bobot_fuzzy'=>'0.0373',
             ],
             [
                 'nama_kabupaten' => 'Sidoarjo',
@@ -148,6 +176,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
+                'bobot_ahp'=>'0.0241',
+                'bobot_fuzzy'=>'0.0270',
             ],
             [
                 'nama_kabupaten' => 'Mojokerto',
@@ -157,6 +187,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
+                'bobot_ahp'=>'0.0170',
+                'bobot_fuzzy'=>'0.0190',
             ],
             [
                 'nama_kabupaten' => 'Jombang',
@@ -166,6 +198,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
+                'bobot_ahp'=>'0.0136',
+                'bobot_fuzzy'=>'0.0287',
             ],
             [
                 'nama_kabupaten' => 'Nganjuk',
@@ -175,6 +209,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#d4cc39',
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
+                'bobot_ahp'=>'0.0616',
+                'bobot_fuzzy'=>'0.0283',
 
             ],
             [
@@ -185,6 +221,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
+                'bobot_ahp'=>'0.0109',
+                'bobot_fuzzy'=>'0.0209',
 
             ],
             [
@@ -195,6 +233,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
+                'bobot_ahp'=>'0.0316',
+                'bobot_fuzzy'=>'0.0200',
 
             ],
             [
@@ -205,6 +245,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
+                'bobot_ahp'=>'0.0109',
+                'bobot_fuzzy'=>'0.0214',
 
             ],
             [
@@ -215,6 +257,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
+                'bobot_ahp'=>'0.0168',
+                'bobot_fuzzy'=>'0.0281',
             ],
             [
                 'nama_kabupaten' => 'Tuban',
@@ -224,6 +268,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
+                'bobot_ahp'=>'0.0138',
+                'bobot_fuzzy'=>'0.0247',
             ],
             [
                 'nama_kabupaten' => 'Lamongan',
@@ -233,6 +279,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
+                'bobot_ahp'=>'0.0105',
+                'bobot_fuzzy'=>'0.0118',
             ],
             [
                 'nama_kabupaten' => 'Gresik',
@@ -242,6 +290,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
+                'bobot_ahp'=>'0.0199',
+                'bobot_fuzzy'=>'0.0315',
             ],
             [
                 'nama_kabupaten' => 'Bangkalan',
@@ -251,6 +301,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
+                'bobot_ahp'=>'0.0105',
+                'bobot_fuzzy'=>'0.0209',
             ],
             [
                 'nama_kabupaten' => 'Sampang',
@@ -260,7 +312,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
-
+                'bobot_ahp'=>'0.0103',
+                'bobot_fuzzy'=>'0.0208',
             ],
             [
                 'nama_kabupaten' => 'Pamekasan',
@@ -270,6 +323,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
+                'bobot_ahp'=>'0.0079',
+                'bobot_fuzzy'=>'0.0089',
             ],
             [
                 'nama_kabupaten' => 'Sumenep',
@@ -278,8 +333,9 @@ class KabupatenSeeder extends Seeder
                 'status_ahp'=>'Rendah',
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Sedang',
-                'color_fahp'=>'#d4cc39'
-
+                'color_fahp'=>'#d4cc39',
+                'bobot_ahp'=>'0.0155',
+                'bobot_fuzzy'=>'0.0265',
             ],
             [
                 'nama_kabupaten' => 'Kota Kediri',
@@ -288,8 +344,9 @@ class KabupatenSeeder extends Seeder
                 'status_ahp'=>'Rendah',
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Sedang',
-                'color_fahp'=>'#d4cc39'
-
+                'color_fahp'=>'#d4cc39',
+                'bobot_ahp'=>'0.0141',
+                'bobot_fuzzy'=>'0.0250',
             ],
             [
                 'nama_kabupaten' => 'Kota Blitar',
@@ -299,7 +356,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
-
+                'bobot_ahp'=>'0.0065',
+                'bobot_fuzzy'=>'0.0164',
             ],
             [
                 'nama_kabupaten' => 'Kota Malang',
@@ -309,7 +367,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
-
+                'bobot_ahp'=>'0.0115',
+                'bobot_fuzzy'=>'0.0130',
             ],
             [
                 'nama_kabupaten' => 'Kota Probolinggo',
@@ -319,6 +378,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
+                'bobot_ahp'=>'0.0053',
+                'bobot_fuzzy'=>'0.0059',
             ],
             [
                 'nama_kabupaten' => 'Kota Pasuruan',
@@ -328,7 +389,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
-
+                'bobot_ahp'=>'0.0050',
+                'bobot_fuzzy'=>'0.0056',
             ],
             [
                 'nama_kabupaten' => 'Kota Mojokerto',
@@ -338,6 +400,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
+                'bobot_ahp'=>'0.0060',
+                'bobot_fuzzy'=>'0.0159',
             ],
             [
                 'nama_kabupaten' => 'Kota Madiun',
@@ -347,6 +411,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
+                'bobot_ahp'=>'0.0309',
+                'bobot_fuzzy'=>'0.0192',
             ],
             [
                 'nama_kabupaten' => 'Kota Surabaya',
@@ -356,6 +422,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#d4cc39',
                 'status_fahp'=>'Tinggi',
                 'color_fahp'=>'#d64545',
+                'bobot_ahp'=>'0.0407',
+                'bobot_fuzzy'=>'0.0549',
             ],
             [
                 'nama_kabupaten' => 'Kota Batu',
@@ -365,6 +433,8 @@ class KabupatenSeeder extends Seeder
                 'color_ahp' =>'#32c256',
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
+                'bobot_ahp'=>'0.0332',
+                'bobot_fuzzy'=>'0.0218',
             ],
         ];
 
