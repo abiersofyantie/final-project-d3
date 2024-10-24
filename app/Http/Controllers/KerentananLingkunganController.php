@@ -42,7 +42,7 @@ class KerentananLingkunganController extends Controller
             'hasil_kerenling' => $total
         ]);
 
-        if(!app(FuzzyController::class)->fuzzyTrigger()){
+        if(!app(FuzzyMLController::class)->fuzzyTrigger()){
             return back()->with('succes', 'Data berhasil ditambahkan, Fuzzy tidak terupdate!');
         }
 
@@ -78,7 +78,7 @@ class KerentananLingkunganController extends Controller
             'semak_belukar' => $request->belukar,
         ]);
 
-        if(!app(FuzzyController::class)->fuzzyTrigger()){
+        if(!app(FuzzyMLController::class)->fuzzyTrigger()){
             return back()->with('succes', 'Data berhasil ditambahkan, Fuzzy tidak terupdate!');
         }
 
@@ -92,7 +92,7 @@ class KerentananLingkunganController extends Controller
     {
         KerentananLingkungan::destroy($id);
 
-        if(!app(FuzzyController::class)->fuzzyTrigger()){
+        if(!app(FuzzyMLController::class)->fuzzyTrigger()){
             return back()->with('succes', 'Data berhasil ditambahkan, Fuzzy tidak terupdate!');
         }
 

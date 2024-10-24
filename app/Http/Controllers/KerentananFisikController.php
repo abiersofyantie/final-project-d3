@@ -41,7 +41,7 @@ class KerentananFisikController extends Controller
             'hasil_kerenfis' => $total
         ]);
 
-        if(!app(FuzzyController::class)->fuzzyTrigger()){
+        if(!app(FuzzyMLController::class)->fuzzyTrigger()){
             return back()->with('succes', 'Data berhasil ditambahkan, Fuzzy tidak terupdate!');
         }
 
@@ -76,7 +76,7 @@ class KerentananFisikController extends Controller
             'rumah' => $request->rumah,
         ]);
 
-        if(!app(FuzzyController::class)->fuzzyTrigger()){
+        if(!app(FuzzyMLController::class)->fuzzyTrigger()){
             return back()->with('succes', 'Data berhasil ditambahkan, Fuzzy tidak terupdate!');
         }
 
@@ -90,7 +90,7 @@ class KerentananFisikController extends Controller
     {
         KerentananFisik::destroy($id);
 
-        if(!app(FuzzyController::class)->fuzzyTrigger()){
+        if(!app(FuzzyMLController::class)->fuzzyTrigger()){
             return back()->with('succes', 'Data berhasil ditambahkan, Fuzzy tidak terupdate!');
         }
 

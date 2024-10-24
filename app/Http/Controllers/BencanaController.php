@@ -52,7 +52,7 @@ class BencanaController extends Controller
             'gerakan_tanah' => $request->gerakan_tanah,
         ]);
 
-        if(!app(FuzzyController::class)->fuzzyTrigger()){
+        if(!app(FuzzyMLController::class)->fuzzyTrigger()){
             return back()->with('succes', 'Data berhasil ditambahkan, Fuzzy tidak terupdate!');
         }
 
@@ -98,7 +98,7 @@ class BencanaController extends Controller
         }
         $normalisasiGerakanTanah = $gerakanTanah/$totalGerakanTanah;
 
-        if(!app(FuzzyController::class)->fuzzyTrigger()){
+        if(!app(FuzzyMLController::class)->fuzzyTrigger()){
             return back()->with('succes', 'Data berhasil ditambahkan, Fuzzy tidak terupdate!');
         }
 
@@ -116,7 +116,7 @@ class BencanaController extends Controller
 
         // FuzzyAhp::where('id_kabupaten', $id_kabupaten);
 
-        if(!app(FuzzyController::class)->fuzzyTrigger()){
+        if(!app(FuzzyMLController::class)->fuzzyTrigger()){
             return back()->with('succes', 'Data berhasil ditambahkan, Fuzzy tidak terupdate!');
         }
 

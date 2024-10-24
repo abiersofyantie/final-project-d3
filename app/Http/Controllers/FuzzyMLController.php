@@ -54,7 +54,7 @@ class TempAhp
     }
 }
 
-class FuzzyController extends Controller
+class FuzzyMLController extends Controller
 {
     // public function index()
     // {
