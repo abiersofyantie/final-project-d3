@@ -43,14 +43,14 @@
                               <p class="text-xs font-weight-bold mb-0">{{ $ahp->nama_kabupaten }}</p>
                             </td>
                             <td>
-                                <p class="text-xs font-weight-bold mb-0">{{ $ahp->fuzzyAhp->ahp_final }}</p>
+                                <p class="text-xs font-weight-bold mb-0">{{ $ahp->bobot_ahp }}</p>
                               </td>
-                              <td class="align-middle text-center text-sm">
-                                @if ($ahp->fuzzyAhp->ahp_final >= 0 && $ahp->fuzzyAhp->ahp_final <= 0.0332)
+                              <td class="">
+                                @if ($ahp->bobot_ahp >= 0 && $ahp->bobot_ahp <= 0.0332)
                                   <span class="badge badge-sm bg-gradient-success">Rendah</span>
-                                @elseif ($ahp->fuzzyAhp->ahp_final >= 0.0385 && $ahp->fuzzyAhp->ahp_final <= 0.0623)
+                                @elseif ($ahp->bobot_ahp >= 0.0385 && $ahp->bobot_ahp <= 0.0623)
                                   <span class="badge badge-sm bg-gradient-warning">Sedang</span>
-                                @elseif ($ahp->fuzzyAhp->ahp_final >= 0.0918)
+                                @elseif ($ahp->bobot_ahp >= 0.0918)
                                   <span class="badge badge-sm bg-gradient-danger">Tinggi</span>
                                 @endif
                               </td>
@@ -84,6 +84,7 @@
         gradientStroke1.addColorStop(1, 'rgba(251, 99, 64, 0.2)');
         gradientStroke1.addColorStop(0.2, 'rgba(251, 99, 64, 0.0)');
         gradientStroke1.addColorStop(0, 'rgba(251, 99, 64, 0)');
+
         new Chart(ctx1, {
             type: "line",
             data: {

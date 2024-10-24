@@ -107,13 +107,13 @@ Route::group(['middleware' => 'auth'], function () {
 		// AHP
 		Route::get('/proses-AHP', [AHPController::class, 'index'])->name('AHP');
 		Route::get('/map-ahp', function () {
-			return view('data.fahp.map-ahp');
+			return view('data.ahp.map-ahp');
 		})->name('MapAHP');
 
 		// FAHP
 		Route::get('/proses-FAHP', [FAHPController::class, 'index'])->name('FAHP');
 		Route::get('/map-fuzzy', function () {
-			return view('data.fahp.map-fuzzyahp');
+			return view('data.fahp.map-fahp');
 		})->name('MapFuzzy');
 	});
 });

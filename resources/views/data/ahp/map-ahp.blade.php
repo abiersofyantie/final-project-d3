@@ -97,8 +97,11 @@ function getColorAHP($kabupatenId)
             var facilityGroup = L.layerGroup();
 
             //mengambil warna
-            var color = ""
             data.features.forEach((feature) => {
+                var color = ""
+                var city_name = feature.properties.NAME_2;
+                var city_id = feature.properties.ID
+
                 $.ajax({
                     url: '/AHP/get-color',
                     method: 'POST',
@@ -109,7 +112,10 @@ function getColorAHP($kabupatenId)
                     },
                     success: function(response) {
                         color = JSON.parse(response).color;
+                        status = JSON.parse(response).status;
+                        bobot = JSON.parse(response).bobot;
 
+                        var popupContent = `<strong>${city_name}</strong><br><br>Status: ${status}<br>Total: ${bobot}<br>Color: ${color}`;
                         var layer = L.geoJSON(feature, {
                             style: {
                                 fillColor: color,
@@ -117,6 +123,9 @@ function getColorAHP($kabupatenId)
                                 weight: 2,
                                 opacity: 1,
                                 fillOpacity: 0.5
+                            },
+                            onEachFeature: function(feature, layer) {
+                            layer.bindPopup(popupContent);
                             }
                         });
 

@@ -12,7 +12,7 @@ class AHPController extends Controller
     {
         $ahp = Kabupaten::all();
         $bobot = FuzzyAhp::all();
-        // dd($ahp[0]->fuzzyAhp->ahp_final);
+
         return view('data.ahp.proses-ahp', compact('ahp', 'bobot'));
     }
 }

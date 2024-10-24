@@ -48,11 +48,11 @@
                       </td>
                       <td class="align-middle text-center text-sm">
                         @if ($kap->skor >= 0 && $kap->skor <= 0.032)
-                          <span class="badge badge-sm bg-gradient-secondary">Rendah</span>
+                          <span class="badge badge-sm bg-gradient-succes">Rendah</span>
                         @elseif ($kap->skor >= 0.033 && $kap->skor <= 0.066)
-                          <span class="badge badge-sm bg-gradient-info">Sedang</span>
+                          <span class="badge badge-sm bg-gradient-warning">Sedang</span>
                         @elseif ($kap->skor >= 0.067)
-                          <span class="badge badge-sm bg-gradient-warning">Tinggi</span>
+                          <span class="badge badge-sm bg-gradient-danger">Tinggi</span>
                         @endif
                       </td>
                       <td class="align-middle text-center">

@@ -30,32 +30,31 @@
                           Kelas Resiko</th>
                     </thead>
                     <tbody>
-                        @foreach ($fahp as $fuzzyahp)
+                        @foreach ($fahp as $fp)
                           <tr>
                             <td>
                               <div class="d-flex px-3 py-1">
                                 <div class="d-flex flex-column justify-content-center">
-                                  <p class="mb-0 text-sm">{{ $fuzzyahp->id }}.</p>
+                                  <p class="mb-0 text-sm">{{ $fp->id }}.</p>
                                 </div>
                               </div>
                             </td>
                             <td>
-                              <p class="text-xs font-weight-bold mb-0">{{ $fuzzyahp->nama_kabupaten }}</p>
+                              <p class="text-xs font-weight-bold mb-0">{{ $fp->nama_kabupaten }}</p>
                             </td>
                             <td>
-                                <p class="text-xs font-weight-bold mb-0">{{ $fuzzyahp->fuzzyAhp->fuzzy_final }}</p>
+                                <p class="text-xs font-weight-bold mb-0">{{ $fp->bobot_fuzzy }}</p>
                               </td>
                               <td class="">
-                                @if ($fuzzyahp->fuzzyAhp->ahp_final >= 0 && $fuzzyahp->fuzzyAhp->fuzzy_final <= 0.0218)
+                                @if ($fp->bobot_fuzzy >= 0 && $fp->bobot_fuzzy <= 0.0218)
                                   <span class="badge badge-sm bg-gradient-success">Rendah</span>
-                                @elseif ($fuzzyahp->fuzzyAhp->fuzzy_final >= 0.0247 && $fuzzyahp->fuzzyAhp->fuzzy_final <= 0.0373)
+                                @elseif ($fp->bobot_fuzzy >= 0.0247 && $fp->bobot_fuzzy <= 0.0373)
                                   <span class="badge badge-sm bg-gradient-warning">Sedang</span>
-                                @elseif ($fuzzyahp->fuzzyAhp->fuzzy_final >= 0.051)
+                                @elseif ($fp->bobot_fuzzy >= 0.051)
                                   <span class="badge badge-sm bg-gradient-danger">Tinggi</span>
                                 @endif
                               </td>
                           </tr>
-
                           <!-- Modal Edit -->
 
                           {{-- End of Modal Edit --}}
