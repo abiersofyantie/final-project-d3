@@ -13,6 +13,7 @@ class Kabupaten extends Model
 {
     use HasFactory;
     protected $table = 'kabupaten';
+    public $timestamps = false;
 
     public function bencana()
     {
@@ -26,7 +27,6 @@ class Kabupaten extends Model
 
     public function fuzzyAhp()
     {
-        // return $this->belongsTo(FuzzyAhp::class,'id_kabupaten','id');
         return $this->hasOne(FuzzyAhp::class,'id_kabupaten','id');
     }
 }

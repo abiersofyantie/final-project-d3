@@ -3,10 +3,10 @@ use App\Models\CityFacility;
 // Retrieve the 'color' from the 'CityFacility' model based on city_id and facility_id
 function getColorAHP($kabupatenId)
 {
-    $color = Kabupaten::where('id', $kabupatenId)->value('color_ahp');
+    $color = Kabupaten::where('id', $kabupatenId)->value('color_fuzzy');
 
     // Create an associative array with the color value
-    $data = ['color_ahp' => $color];
+    $data = ['color_fuzzy' => $color];
 
     // Convert the array to JSON format
     $json = json_encode($data);
@@ -50,7 +50,6 @@ function getColorAHP($kabupatenId)
     <script>
         // City and Regency
         var myCityMap = L.map('mapCityRegency').setView([-7.6, 112.3], 8);
-
         var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 15,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -97,19 +96,25 @@ function getColorAHP($kabupatenId)
             var facilityGroup = L.layerGroup();
 
             //mengambil warna
-            var color = ""
             data.features.forEach((feature) => {
+                var color = ""
+                var city_name = feature.properties.NAME_2;
+                var city_id = feature.properties.ID
+
                 $.ajax({
                     url: '/AHP/get-color',
                     method: 'POST',
                     data: {
                         _token: $('meta[name="csrf-token"]').attr('content'),
                         id: feature.properties.ID,
-                        tipe: "ahp",
+                        tipe: "fahp",
                     },
                     success: function(response) {
                         color = JSON.parse(response).color;
+                        status = JSON.parse(response).status;
+                        bobot = JSON.parse(response).bobot;
 
+                        var popupContent = `<strong>${city_name}</strong><br><br>Status: ${status}<br>Total: ${bobot}<br>Color: ${color}`;
                         var layer = L.geoJSON(feature, {
                             style: {
                                 fillColor: color,
@@ -117,6 +122,9 @@ function getColorAHP($kabupatenId)
                                 weight: 2,
                                 opacity: 1,
                                 fillOpacity: 0.5
+                            },
+                            onEachFeature: function(feature, layer) {
+                            layer.bindPopup(popupContent);
                             }
                         });
 
@@ -129,7 +137,7 @@ function getColorAHP($kabupatenId)
             })
 
             myCityLayer.addLayer(facilityGroup);
-            layerControl.addOverlay(facilityGroup, "AHP");
+            layerControl.addOverlay(facilityGroup, "Fuzzy");
         }
     </script>
 </body>

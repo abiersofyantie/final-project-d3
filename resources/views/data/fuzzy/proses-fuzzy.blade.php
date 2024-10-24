@@ -1,13 +1,13 @@
 @extends('layouts.app', ['class' => 'g-sidenav-show bg-gray-100'])
 
 @section('content')
-@include('layouts.navbars.auth.topnav', ['title' => 'FAHP'])
+@include('layouts.navbars.auth.topnav', ['title' => 'Fuzzy'])
 <div class="container-fluid py-4">
   <div class="row">
     <div class="col-12">
       <div class="card mb-4">
         <div class="card-header pb-0">
-          <h6 class="text-uppercase">Perhitungan F-AHP Tanah Longsor Di Jawa Timur</h6>
+          <h6 class="text-uppercase">Perhitungan Fuzzy Tanah Longsor Di Jawa Timur</h6>
         </div>
 
         <div class="card-body px-0 pt-0 pb-2">
@@ -24,51 +24,51 @@
                 </tr>
               </thead>
               <tbody>
-                  @foreach ($fahp as $fp)
+                  @foreach ($fuzzy as $fuzz)
                     <tr>
                       <td>
                         <div class="d-flex px-3 py-1">
                           <div class="d-flex flex-column justify-content-center">
-                            <p class="mb-0 text-sm">{{ $fp->id }}.</p>
+                            <p class="mb-0 text-sm">{{ $fuzz->id }}.</p>
                           </div>
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">{{ $fp->nama_kabupaten }}</p>
+                        <p class="text-xs font-weight-bold mb-0">{{ $fuzz->nama_kabupaten }}</p>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">{{ $fp->bobot_fahp }}</p>
+                        <p class="text-xs font-weight-bold mb-0">{{ $fuzz->bobot_fuzzy }}</p>
                       </td>
                       <td class="">
-                        @if ($fp->bobot_fahp >= 0 && $fp->bobot_fahp <= 0.0247)
+                        @if ($fuzz->bobot_fuzzy >= 0 && $fuzz->bobot_fuzzy <= 0.0247)
                           <span class="badge badge-sm bg-gradient-success">Rendah</span>
-                        @elseif ($fp->bobot_fahp >= 0.0247 && $fp->bobot_fahp <= 0.051)
+                        @elseif ($fuzz->bobot_fuzzy >= 0.0247 && $fuzz->bobot_fuzzy <= 0.051)
                           <span class="badge badge-sm bg-gradient-warning">Sedang</span>
-                        @elseif ($fp->bobot_fahp >= 0.051)
+                        @elseif ($fuzz->bobot_fuzzy >= 0.051)
                           <span class="badge badge-sm bg-gradient-danger">Tinggi</span>
                         @endif
                       </td>
                       <td class="align-middle text-center">
-                        <button class="btn my-auto btn-link text-secondary font-weight-bold text-xs" data-bs-toggle="modal" data-bs-target="#edit-{{ $fp->id }}">
+                        <button class="btn my-auto btn-link text-secondary font-weight-bold text-xs" data-bs-toggle="modal" data-bs-target="#edit-{{ $fuzz->id }}">
                           <i class="fas fa-edit text-warning"></i>
                         </button>
                       </td>
                     </tr>
 
                     {{-- Modal Edit --}}
-                    <div class="modal fade" id="edit-{{ $fp->id }}" tabindex="-1" role="dialog" aria-labelledby="createLabel" aria-hidden="true">
+                    <div class="modal fade" id="edit-{{ $fuzz->id }}" tabindex="-1" role="dialog" aria-labelledby="createLabel" aria-hidden="true">
                       <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
 
                           <div class="modal-header mx-auto">
-                            <h5 class="modal-title text-uppercase" id="createLabel">Edit Data FAHP</h5>
+                            <h5 class="modal-title text-uppercase" id="createLabel">Edit Data Fuzzy</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
 
                           {{-- Form Edit --}}
-                          <form method="POST" action="{{ route('fahp.update', $fp->id) }}">
+                          <form method="POST" action="{{ route('fuzzy.update', $fuzz->id) }}">
                             <div class="modal-body">
                               @csrf
 
@@ -77,14 +77,14 @@
                                   <div class="form-group">
                                     <label class="form-control-label" for="input-kabupaten">Nama Kota / Kabupaten</label>
                                     <select class="form-control" disabled>
-                                      <option selected>{{ $fp->nama_kabupaten }}</option>
+                                      <option selected>{{ $fuzz->nama_kabupaten }}</option>
                                     </select>
                                   </div>
                                 </div>
                                 <div class="col">
                                   <div class="form-group">
-                                    <label class="form-control-label" for="input-bobot">Bobot FAHP</label>
-                                    <input type="number" name="bobot" class="form-control" id="input-bobot" step="0.0001" value="{{ $fp->bobot_fahp }}">
+                                    <label class="form-control-label" for="input-bobot">Bobot AHP</label>
+                                    <input type="number" name="bobot" class="form-control" id="input-bobot" step="0.0001" value="{{ $fuzz->bobot_fuzzy }}">
                                   </div>
                                 </div>
                               </div>

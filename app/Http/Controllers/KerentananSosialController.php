@@ -43,7 +43,7 @@ class KerentananSosialController extends Controller
             'hasil_kerensos' => $total
         ]);
 
-        if(!app(FuzzyController::class)->fuzzyTrigger()){
+        if(!app(FuzzyMLController::class)->fuzzyTrigger()){
             return back()->with('succes', 'Data berhasil ditambahkan, Fuzzy tidak terupdate!');
         }
 
@@ -80,7 +80,7 @@ class KerentananSosialController extends Controller
             'rasio_kelompok_umur' => $request->umur,
         ]);
 
-        if(!app(FuzzyController::class)->fuzzyTrigger()){
+        if(!app(FuzzyMLController::class)->fuzzyTrigger()){
             return back()->with('succes', 'Data berhasil ditambahkan, Fuzzy tidak terupdate!');
         }
 
@@ -94,7 +94,7 @@ class KerentananSosialController extends Controller
     {
         KerentananSosial::destroy($id);
 
-        if(!app(FuzzyController::class)->fuzzyTrigger()){
+        if(!app(FuzzyMLController::class)->fuzzyTrigger()){
             return back()->with('succes', 'Data berhasil ditambahkan, Fuzzy tidak terupdate!');
         }
 
