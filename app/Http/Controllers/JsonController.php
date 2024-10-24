@@ -24,11 +24,15 @@ class JsonController extends Controller
             $color = Kabupaten::where('id', $id)->value('color_ahp');
             $status = Kabupaten::where('id', $id)->value('status_ahp');
             $bobot = Kabupaten::where('id', $id)->value('bobot_ahp');
+        } else if ($tipe == "fuzzy") {
+            $color = Kabupaten::where('id', $id)->value('color_fuzzy');
+            $status = Kabupaten::where('id', $id)->value('status_fuzzy');
+            $bobot = Kabupaten::where('id', $id)->value('bobot_fuzzy');
         } else if ($tipe == "fahp") {
             $color = Kabupaten::where('id', $id)->value('color_fahp');
             $status = Kabupaten::where('id', $id)->value('status_fahp');
             $bobot = Kabupaten::where('id', $id)->value('bobot_fahp');
-        }
+        } 
 
         // Create an associative array with the color value
         $data = ['color' => $color, 'status' => $status, 'bobot' => $bobot];

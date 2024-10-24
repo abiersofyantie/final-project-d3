@@ -77,6 +77,34 @@
         </div>
       </li>
 
+      {{-- Collapse Fuzzy --}}
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="#collapse-fuzzy" role="button" aria-expanded="{{ Route::currentRouteName() == 'Fuzzy' ? 'true' : 'false' }}" aria-controls="collapse-fuzzy">
+          <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="fas fa-swatchbook {{ Route::currentRouteName() == 'Fuzzy' ? 'text-success' : 'text-secondary' }} text-sm opacity-10"></i>
+          </div>
+          <span class="nav-link-text ms-1">Metode Fuzzy</span>
+        </a>
+
+        {{-- List Items --}}
+        <div class="collapse {{ Route::currentRouteName() == 'Fuzzy' ? 'show' : '' }}" id="collapse-fuzzy">
+          <ul class="nav nav-sm flex-column">
+            <li class="nav-item ps-3">
+              <a class="nav-link {{ Route::currentRouteName() == 'Fuzzy' ? 'active' : '' }}" href="{{ route('Fuzzy') }}">
+                <i class="fas fa-circle {{ Route::currentRouteName() == 'Fuzzy' ? 'text-success' : 'text-secondary' }} text-xs opacity-10"></i>
+                {{ __('Proses Fuzzy') }}
+              </a>
+            </li>
+            <li class="nav-item ps-3">
+              <a class="nav-link" href="{{ route('MapFuzzy') }}">
+                <i class="fas fa-circle text-secondary text-xs opacity-10"></i>
+                {{ __('PRB Mapin') }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+
       {{-- Collapse FAHP --}}
       <li class="nav-item">
         <a class="nav-link" data-bs-toggle="collapse" href="#collapse-fahp" role="button" aria-expanded="{{ Route::currentRouteName() == 'FAHP' ? 'true' : 'false' }}" aria-controls="collapse-fahp">
@@ -96,7 +124,7 @@
               </a>
             </li>
             <li class="nav-item ps-3">
-              <a class="nav-link" href="{{ route('MapFuzzy') }}">
+              <a class="nav-link" href="{{ route('MapFAHP') }}">
                 <i class="fas fa-circle text-secondary text-xs opacity-10"></i>
                 {{ __('PRB Mapin') }}
               </a>

@@ -6,13 +6,13 @@ use App\Models\FuzzyAhp;
 use App\Models\Kabupaten;
 use Illuminate\Http\Request;
 
-class FAHPController extends Controller
+class FuzzyController extends Controller
 {
     public function index()
     {
-        $fahp = Kabupaten::all();
+        $fuzzy = Kabupaten::all();
         $bobot = FuzzyAhp::all();
 
-        return view('data.fahp.proses-fahp', compact('fahp', 'bobot'));
+        return view('data.fuzzy.proses-fuzzy', compact('fuzzy', 'bobot'));
     }
 }

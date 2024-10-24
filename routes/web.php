@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
 	AHPController,
+	FuzzyController,
 	BencanaController,
 	IndeksKapasitasController,
 	KerentananSosialController,
@@ -110,10 +111,16 @@ Route::group(['middleware' => 'auth'], function () {
 			return view('data.ahp.map-ahp');
 		})->name('MapAHP');
 
+		// Fuzzy
+		Route::get('/proses-Fuzzy', [FuzzyController::class, 'index'])->name('Fuzzy');
+		Route::get('/map-fuzzy', function () {
+			return view('data.fuzzy.map-fuzzy');
+		})->name('MapFuzzy');
+
 		// FAHP
 		Route::get('/proses-FAHP', [FAHPController::class, 'index'])->name('FAHP');
-		Route::get('/map-fuzzy', function () {
+		Route::get('/map-fahp', function () {
 			return view('data.fahp.map-fahp');
-		})->name('MapFuzzy');
+		})->name('MapFAHP');
 	});
 });
