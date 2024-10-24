@@ -20,18 +20,48 @@ class JsonController extends Controller
         $tipe = $request->input('tipe');
         $id = $request->input('id');
 
+        $colorOptions = [
+            "Rendah" => "#32c256",
+            "Sedang" => "#d4cc39",
+            "Tinggi" => "#d64545"
+        ];
+
         if ($tipe == "ahp") {
-            $color = Kabupaten::where('id', $id)->value('color_ahp');
-            $status = Kabupaten::where('id', $id)->value('status_ahp');
             $bobot = Kabupaten::where('id', $id)->value('bobot_ahp');
+
+            if ($bobot >= 0.0385 && $bobot <= 0.0918) {
+                $status = "Sedang";
+            } else if ($bobot < 0.0385) {
+                $status = "Rendah";
+            } else if ($bobot > 0.0918) {
+                $status = "Tinggi";
+            }
+
+            $color = $colorOptions[$status];
         } else if ($tipe == "fuzzy") {
-            $color = Kabupaten::where('id', $id)->value('color_fuzzy');
-            $status = Kabupaten::where('id', $id)->value('status_fuzzy');
             $bobot = Kabupaten::where('id', $id)->value('bobot_fuzzy');
+
+            if ($bobot >= 0.0247 && $bobot <= 0.051) {
+                $status = "Sedang";
+            } else if ($bobot < 0.0247) {
+                $status = "Rendah";
+            } else if ($bobot > 0.051) {
+                $status = "Tinggi";
+            }
+
+            $color = $colorOptions[$status];
         } else if ($tipe == "fahp") {
-            $color = Kabupaten::where('id', $id)->value('color_fahp');
-            $status = Kabupaten::where('id', $id)->value('status_fahp');
             $bobot = Kabupaten::where('id', $id)->value('bobot_fahp');
+
+            if ($bobot >= 0.0247 && $bobot <= 0.051) {
+                $status = "Sedang";
+            } else if ($bobot < 0.0247) {
+                $status = "Rendah";
+            } else if ($bobot > 0.051) {
+                $status = "Tinggi";
+            }
+
+            $color = $colorOptions[$status];
         } 
 
         // Create an associative array with the color value
