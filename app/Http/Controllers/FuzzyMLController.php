@@ -56,16 +56,10 @@ class TempAhp
 
 class FuzzyMLController extends Controller
 {
-    // public function index()
-    // {
-    //     $fuzzy = Kabupaten::all();
-    //     $bobot = FuzzyAhp::all();
-    //     // dd($ahp);
-    //     return view('data.ahp.proses-fahp', compact('fuzzy', 'bobot'));
-    // }
-
     public function fuzzyTrigger()
     {
+        return false;
+
         $dataArr = [];
 
         try {
