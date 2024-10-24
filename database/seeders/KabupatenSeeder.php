@@ -23,6 +23,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
                 'bobot_ahp'=>'0.0325',
+                'bobot_fuzzy'=>'0.0209',
                 'bobot_fahp'=>'0.0209',
             ],
             [
@@ -34,6 +35,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
                 'bobot_ahp'=>'0.0597',
+                'bobot_fuzzy'=>'0.0261',
                 'bobot_fahp'=>'0.0261',
             ],
             [
@@ -45,6 +47,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
                 'bobot_ahp'=>'0.0623',
+                'bobot_fuzzy'=>'0.0290',
                 'bobot_fahp'=>'0.0290',
             ],
             [
@@ -56,6 +59,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
                 'bobot_ahp'=>'0.0142',
+                'bobot_fuzzy'=>'0.0251',
                 'bobot_fahp'=>'0.0251',
             ],
             [
@@ -67,6 +71,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
                 'bobot_ahp'=>'0.0157',
+                'bobot_fuzzy'=>'0.0268',
                 'bobot_fahp'=>'0.0268',
             ],
             [
@@ -78,6 +83,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
                 'bobot_ahp'=>'0.0163',
+                'bobot_fuzzy'=>'0.0275',
                 'bobot_fahp'=>'0.0275',
             ],
             [
@@ -89,6 +95,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Tinggi',
                 'color_fahp'=>'#d64545',
                 'bobot_ahp'=>'0.0614',
+                'bobot_fuzzy'=>'0.0535',
                 'bobot_fahp'=>'0.0535',
             ],
             [
@@ -100,6 +107,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
                 'bobot_ahp'=>'0.0385',
+                'bobot_fuzzy'=>'0.0277',
                 'bobot_fahp'=>'0.0277',
             ],
             [
@@ -111,6 +119,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Tinggi',
                 'color_fahp'=>'#d64545',
                 'bobot_ahp'=>'0.0918',
+                'bobot_fuzzy'=>'0.0622',
                 'bobot_fahp'=>'0.0622',
             ],
             [
@@ -122,6 +131,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Tinggi',
                 'color_fahp'=>'#d64545',
                 'bobot_ahp'=>'0.0454',
+                'bobot_fuzzy'=>'0.0510',
                 'bobot_fahp'=>'0.0510',
             ],
             [
@@ -133,6 +143,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
                 'bobot_ahp'=>'0.0183',
+                'bobot_fuzzy'=>'0.0298',
                 'bobot_fahp'=>'0.0298',
             ],
             [
@@ -144,6 +155,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
                 'bobot_ahp'=>'0.0463',
+                'bobot_fuzzy'=>'0.0365',
                 'bobot_fahp'=>'0.0365',
             ],
             [
@@ -155,6 +167,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
                 'bobot_ahp'=>'0.0443',
+                'bobot_fuzzy'=>'0.0342',
                 'bobot_fahp'=>'0.0342',
             ],
             [
@@ -166,6 +179,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
                 'bobot_ahp'=>'0.0250',
+                'bobot_fuzzy'=>'0.0373',
                 'bobot_fahp'=>'0.0373',
             ],
             [
@@ -177,6 +191,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
                 'bobot_ahp'=>'0.0241',
+                'bobot_fuzzy'=>'0.0270',
                 'bobot_fahp'=>'0.0270',
             ],
             [
@@ -188,6 +203,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
                 'bobot_ahp'=>'0.0170',
+                'bobot_fuzzy'=>'0.0190',
                 'bobot_fahp'=>'0.0190',
             ],
             [
@@ -199,6 +215,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
                 'bobot_ahp'=>'0.0136',
+                'bobot_fuzzy'=>'0.0287',
                 'bobot_fahp'=>'0.0287',
             ],
             [
@@ -210,6 +227,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
                 'bobot_ahp'=>'0.0616',
+                'bobot_fuzzy'=>'0.0283',
                 'bobot_fahp'=>'0.0283',
 
             ],
@@ -222,6 +240,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
                 'bobot_ahp'=>'0.0109',
+                'bobot_fuzzy'=>'0.0209',
                 'bobot_fahp'=>'0.0209',
 
             ],
@@ -234,6 +253,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
                 'bobot_ahp'=>'0.0316',
+                'bobot_fuzzy'=>'0.0200',
                 'bobot_fahp'=>'0.0200',
 
             ],
@@ -246,6 +266,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
                 'bobot_ahp'=>'0.0109',
+                'bobot_fuzzy'=>'0.0214',
                 'bobot_fahp'=>'0.0214',
 
             ],
@@ -258,6 +279,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
                 'bobot_ahp'=>'0.0168',
+                'bobot_fuzzy'=>'0.0281',
                 'bobot_fahp'=>'0.0281',
             ],
             [
@@ -269,6 +291,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
                 'bobot_ahp'=>'0.0138',
+                'bobot_fuzzy'=>'0.0247',
                 'bobot_fahp'=>'0.0247',
             ],
             [
@@ -280,6 +303,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
                 'bobot_ahp'=>'0.0105',
+                'bobot_fuzzy'=>'0.0118',
                 'bobot_fahp'=>'0.0118',
             ],
             [
@@ -291,6 +315,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
                 'bobot_ahp'=>'0.0199',
+                'bobot_fuzzy'=>'0.0315',
                 'bobot_fahp'=>'0.0315',
             ],
             [
@@ -302,6 +327,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
                 'bobot_ahp'=>'0.0105',
+                'bobot_fuzzy'=>'0.0209',
                 'bobot_fahp'=>'0.0209',
             ],
             [
@@ -313,6 +339,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
                 'bobot_ahp'=>'0.0103',
+                'bobot_fuzzy'=>'0.0208',
                 'bobot_fahp'=>'0.0208',
             ],
             [
@@ -324,6 +351,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
                 'bobot_ahp'=>'0.0079',
+                'bobot_fuzzy'=>'0.0089',
                 'bobot_fahp'=>'0.0089',
             ],
             [
@@ -335,6 +363,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
                 'bobot_ahp'=>'0.0155',
+                'bobot_fuzzy'=>'0.0265',
                 'bobot_fahp'=>'0.0265',
             ],
             [
@@ -346,6 +375,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Sedang',
                 'color_fahp'=>'#d4cc39',
                 'bobot_ahp'=>'0.0141',
+                'bobot_fuzzy'=>'0.0250',
                 'bobot_fahp'=>'0.0250',
             ],
             [
@@ -357,6 +387,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
                 'bobot_ahp'=>'0.0065',
+                'bobot_fuzzy'=>'0.0164',
                 'bobot_fahp'=>'0.0164',
             ],
             [
@@ -368,6 +399,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
                 'bobot_ahp'=>'0.0115',
+                'bobot_fuzzy'=>'0.0130',
                 'bobot_fahp'=>'0.0130',
             ],
             [
@@ -379,6 +411,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
                 'bobot_ahp'=>'0.0053',
+                'bobot_fuzzy'=>'0.0059',
                 'bobot_fahp'=>'0.0059',
             ],
             [
@@ -390,6 +423,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
                 'bobot_ahp'=>'0.0050',
+                'bobot_fuzzy'=>'0.0056',
                 'bobot_fahp'=>'0.0056',
             ],
             [
@@ -401,6 +435,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
                 'bobot_ahp'=>'0.0060',
+                'bobot_fuzzy'=>'0.0159',
                 'bobot_fahp'=>'0.0159',
             ],
             [
@@ -412,6 +447,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
                 'bobot_ahp'=>'0.0309',
+                'bobot_fuzzy'=>'0.0192',
                 'bobot_fahp'=>'0.0192',
             ],
             [
@@ -423,6 +459,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Tinggi',
                 'color_fahp'=>'#d64545',
                 'bobot_ahp'=>'0.0407',
+                'bobot_fuzzy'=>'0.0549',
                 'bobot_fahp'=>'0.0549',
             ],
             [
@@ -434,6 +471,7 @@ class KabupatenSeeder extends Seeder
                 'status_fahp'=>'Rendah',
                 'color_fahp'=>'#32c256',
                 'bobot_ahp'=>'0.0332',
+                'bobot_fuzzy'=>'0.0218',
                 'bobot_fahp'=>'0.0218',
             ],
         ];
